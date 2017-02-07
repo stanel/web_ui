@@ -1,0 +1,62 @@
+<html>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title>SP: css3 media queries</title>
+
+    <style type=text/css>
+        .myContainer {
+            border-color:black;
+            border-style: solid;
+            border-width: 1px;
+            background-color: beige;
+        }
+
+        @media only screen and (max-device-width:400px) {
+            .myContainer{
+                background-color: red;
+            }
+        }
+
+        @media only screen and (min-device-width:400px) and (max-device-width:800px){
+            .myContainer{
+                background-color: green;
+            }
+        }
+
+        @media only screen and (min-device-width:800px) and (max-device-width:1200px){
+            .myContainer{
+                background-color: blue;
+            }
+        }
+        
+        @media only screen and (min-device-width:1200px) {
+            .myContainer{
+                background-color: yellow;
+            }
+        }        
+
+    </style>
+
+</head>
+
+<body>
+    <p>
+        Mit media queries kann man z.B dynamische Eigenschaften zu eine vorhandene css Klasse hinzufügen
+    </p>
+
+    <div class="myContainer">
+        diese Container wird verschiedene Farben haben, je nach Gerät
+
+        <ul>
+            <li>extra kleine Geräte wie Handys (xs: 0:400px): rot</li>
+            <li>kleine Geräte wie Tablets (sm: 400:800px): grün</li>
+            <li>mittel große Geräte wie Laptops(md: 800:1200px): blau</li>
+            <li>große Geräte wie Desktops(>=1200px): gelb</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
